@@ -1,0 +1,20 @@
+# Example path fragment / Fragmento de path de exemplo
+# Merge into openapi.yaml paths as needed
+# Fundir em openapi.yaml conforme necessário
+
+/users/{userId}:
+  get:
+    summary: Get user / Obter utilizador
+    operationId: getUser
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+    responses:
+      '200':
+        description: OK
+      '404':
+        description: Not found / Não encontrado
